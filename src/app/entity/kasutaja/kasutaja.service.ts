@@ -54,7 +54,7 @@ export class KasutajaService {
 
   findById(id: number): IKasutaja {
     let index = this.getIndex(id);
-    if (index > 0) {
+    if (index > -1) {
       let res = this.kasutaja[index];
       return res;
     } else {
@@ -76,7 +76,7 @@ export class KasutajaService {
 
   deleteById(id: number) {
     let index = this.getIndex(id);
-    if (index > 0) {
+    if (index > -1) {
       let res = this.kasutaja;
       res.splice(index, 1);
       this.kasutaja = res;
@@ -107,7 +107,7 @@ export class KasutajaService {
   updateMock(kasutaja: IKasutaja): void {
     if (kasutaja.id != null) {
       let index = this.getIndex(kasutaja.id);
-      if (index > 0) {
+      if (index > -1) {
         let res = this.kasutaja;
         res.splice(index, 1, kasutaja);
         this.kasutaja = res;
