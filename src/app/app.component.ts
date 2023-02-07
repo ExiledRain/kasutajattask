@@ -5,6 +5,12 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'task';
+export class AppComponent{
+  task = 'task';
+  name = 'User controll task';
+
+  reset() {
+    localStorage.setItem('isFresh', 'true');
+    location.reload();
+  }
 }

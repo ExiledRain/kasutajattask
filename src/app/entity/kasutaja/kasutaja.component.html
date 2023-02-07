@@ -1,0 +1,12 @@
+<div *ngIf="kasutajad != null && kasutajad.length > 0; else noUsers" class="content" style="margin-top: 30px;">
+  <input type="text" placeholder="Search by name:" style="width: 80%; margin: 7px; vertical-align: middle; height: 20px;" [(ngModel)]="filterText"/>
+  <div style="background-color: lightgrey;color:white; padding: 5px 0 5px 0">Kasutajad: </div>
+  <ul>
+    <li *ngFor="let kasutaja of kasutajad | nameFilter : filterText">
+      <a href="/{{kasutaja.id}}/view">{{kasutaja.name}}</a>
+    </li>
+  </ul>
+</div>
+<ng-template #noUsers>
+  <div class="content">There are no users found.</div>
+</ng-template>

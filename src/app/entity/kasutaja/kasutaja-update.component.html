@@ -1,0 +1,70 @@
+<div class="content">
+  <form (ngSubmit)="save()" [formGroup]="editForm" name="editForm" novalidate role="form">
+    <tr>
+      <td><label for="field_name">Name:</label></td>
+      <td><input formControlName="name" id="field_name" name="name" type="text" /></td>
+    </tr>
+    <tr>
+      <td><label for="field_username">Username:</label></td>
+      <td><input formControlName="username" id="field_username" name="username" type="text" /></td>
+    </tr>
+    <tr>
+      <td><label for="field_email">Email:</label></td>
+      <td><input formControlName="email" id="field_email" name="email" type="text" /></td>
+    </tr>
+    <hr>
+    <div class="p7">Address:</div>
+    <tr>
+      <td>
+        <label for="field_street">Street:</label></td>
+      <td>
+        <input formControlName="street" id="field_street" name="street" type="text" />
+      </td>
+    </tr>
+    <tr>
+      <td><label for="field_suite">Suite:</label></td>
+      <td><input formControlName="suite" id="field_suite" name="suite" type="text" /></td>
+    </tr>
+    <tr>
+      <td><label for="field_city">City:</label></td>
+      <td><input formControlName="city" id="field_city" name="city" type="text" /></td>
+    </tr>
+    <tr>
+      <td><label for="field_zipcode">Zipcode:</label></td>
+      <td><input formControlName="zipcode" id="field_zipcode" name="zipcode" type="text" /></td>
+    </tr>
+    <hr>
+    <div class="p7">Geolocation:</div>
+    <tr>
+      <td><label for="field_lat">Latitude:</label></td>
+      <td><input formControlName="lat" id="field_lat" name="lat" type="text" /></td>
+    </tr>
+    <tr>
+      <td><label for="field_lng">Longtitude:</label></td>
+      <td><input formControlName="lng" id="field_lng" name="lng" type="text" /></td>
+    </tr>
+    <hr>
+    <div class="p7">Company:</div>
+    <tr>
+      <td><label for="field_companyName">Name:</label></td>
+      <td><input formControlName="companyName" id="field_companyName" name="companyName" type="text" /></td>
+    </tr>
+    <tr>
+      <td><label for="field_catchPhrase">Catch phrase:</label></td>
+      <td><input formControlName="catchPhrase" id="field_catchPhrase" name="catchPhrase" type="text" /></td>
+    </tr>
+    <tr>
+      <td><label for="field_bs">BS:</label></td>
+      <td><input formControlName="bs" id="field_bs" name="bs" type="text" /></td>
+    </tr>
+    <div>
+      <button (click)="previousState('')" class="default-button" id="cancel-save" type="button">
+        <span>Cancel</span>
+      </button>
+
+      <button [disabled]="editForm.invalid" class="default-button" id="save-entity" type="submit">
+        <span>Save</span>
+      </button>
+    </div>
+  </form>
+</div>

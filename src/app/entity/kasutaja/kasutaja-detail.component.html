@@ -1,0 +1,66 @@
+<div class="content">
+  <form name="editForm" novalidate role="form">
+    <tr>
+      <td>Name:</td>
+      <td><span>{{ kasutaja.name }}</span></td>
+    </tr>
+    <tr>
+      <td>Username:</td>
+      <td><span>{{ kasutaja.username }}</span></td>
+    </tr>
+    <tr>
+      <td>Email:</td>
+      <td><span>{{ kasutaja.email }}</span></td>
+    </tr>
+    <hr>
+    <div class="p7">Address:</div>
+    <tr>
+      <td>
+        Street:</td>
+      <td>
+        <span>{{ address.street }}</span>
+      </td>
+    </tr>
+    <tr>
+      <td>Suite:</td>
+      <td><span>{{ address.suite }}</span></td>
+    </tr>
+    <tr>
+      <td>City:</td>
+      <td><span>{{ address.city }}</span></td>
+    </tr>
+    <tr>
+      <td>Zipcode:</td>
+      <td><span>{{ address.zipcode }}</span></td>
+    </tr>
+    <hr>
+    <div class="p7">Geolocation:</div>
+    <tr>
+      <td>Latitude:</td>
+      <td><span>{{ geo.lat }}</span></td>
+    </tr>
+    <tr>
+      <td>Longtitude:</td>
+      <td><span>{{ geo.lng }}</span></td>
+    </tr>
+    <hr>
+    <div class="p7">Company:</div>
+    <tr>
+      <td>Name:</td>
+      <td><span>{{ company.name }}</span></td>
+    </tr>
+    <tr>
+      <td>Catch phrase:</td>
+      <td><span>{{ company.catchPhrase }}</span></td>
+    </tr>
+    <tr>
+      <td>BS:</td>
+      <td><span>{{ company.bs }}</span></td>
+    </tr>
+  </form>
+  <div>
+    <button class="default-button" (click)="delete()">DELETE</button>
+    <button class="default-button" (click)="edit()">EDIT</button>
+    <button class="default-button" (click)="previousState('')">BACK</button>
+  </div>
+</div>
